@@ -1,0 +1,501 @@
+@charset "UTF-8";
+/*
+	------------------4. font-size chung cho text 1.4rem --> Xong
+	6. color btn !important  -- tạo btn dùng lại 
+	7. font-weight cho chữ thường 500
+	8. thống nhất đặt btn (div hay a hay button) - học bem btn
+	----------------9. line-height: 1.6
+	10. hover btn, hover footer,
+	----------------13. chú ý component dùng lại -- ko có margin
+	14. padding-top: 50%;
+	16. thanh tiến độ học (courses-item)
+*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+}
+
+.navBar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: black;
+	transition: all 0.3s ease-in-out;
+	z-index: 3000;
+}
+.navBar--transparent {
+	margin-top: 1.4rem;
+	background-color: transparent;
+}
+.navBar__content {
+	display: flex;
+	align-items: center;
+	height: 5.4rem;
+}
+.navBar__link {
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+}
+.navBar__logo {
+	padding-bottom: 0.8rem;
+}
+@media (min-width: 0) and (max-width: 739px) {
+	.navBar__logo {
+		margin-left: 1.6rem;
+	}
+}
+.navBar__logo img {
+	height: 3.2rem;
+}
+.navBar__mainMenu {
+	list-style: none;
+	padding: 0 1.5rem;
+	display: none;
+	margin-left: 4rem;
+}
+@media (min-width: 1024px) {
+	.navBar__mainMenu {
+		display: inline-block;
+	}
+}
+.navBar__subMenu {
+	display: none;
+	position: absolute;
+	background-color: white;
+}
+.navBar__subMenu::before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 40px;
+	top: -20px;
+}
+.navBar__subMenu .navBar__link {
+	display: block;
+	font-size: 1.6rem;
+	color: #333;
+	line-height: 4.6rem;
+	padding-left: 2.4rem;
+	min-width: 23.2rem;
+	text-transform: capitalize;
+	font-weight: 300;
+}
+.navBar__subMenu .navBar__link:hover {
+	background-color: #f05123;
+	color: white;
+}
+.navBar__item {
+	line-height: 5.4rem;
+	display: inline-block;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 0 1.6rem;
+	position: relative;
+	cursor: pointer;
+}
+.navBar__item:hover .navBar__subMenu {
+	display: block;
+}
+.navBar__rightBox {
+	margin-left: auto;
+}
+@media (min-width: 0) and (max-width: 739px) {
+	.navBar__rightBox {
+		margin-right: 0.8rem;
+	}
+}
+.navBar__icon {
+	color: white;
+	font-size: 2rem;
+	padding: 0 0.8rem;
+}
+.navBar__icon + .navBar__icon {
+	margin-left: 1.6rem;
+}
+
+.footer {
+	background-color: #151515;
+	display: flex;
+	flex-direction: column;
+	padding: 3rem 0 5rem;
+	padding: 3rem 2.4rem 5rem;
+}
+.footer__intro {
+	margin-top: 1rem;
+}
+.footer__logo > img {
+	height: 4.8rem;
+}
+.footer__desc {
+	margin: 1.4rem 0;
+	line-height: 1.6;
+}
+.footer__desc,
+.footer__link,
+.footer_input,
+.footer__copyright {
+	font-size: 1.4rem;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.8);
+}
+.footer__about {
+	margin-top: 1rem;
+}
+.footer__title {
+	font-size: 2rem;
+	font-weight: 600;
+	color: white;
+	margin: 0.8rem 0 2.5rem;
+}
+.footer__link {
+	display: block;
+	margin-bottom: 1.2rem;
+	text-decoration: none;
+}
+.footer_input {
+	width: 100%;
+	padding-left: 1.8rem;
+	line-height: 4rem;
+	border-radius: 100px;
+	background-color: rgba(255, 255, 255, 0.08);
+	outline: none;
+	border: none;
+	margin: 2.6rem 0 2rem;
+}
+@media (min-width: 0) and (max-width: 739px) {
+	.footer {
+		text-align: center;
+	}
+}
+
+.btn {
+	display: inline-block;
+	cursor: pointer;
+	font-size: 1.4rem;
+	padding: 1.2rem 2.4rem;
+	border-radius: 100px;
+	color: white;
+	text-decoration: none;
+	outline: none;
+	border: none;
+}
+.btn:hover {
+	filter: brightness(0.9);
+}
+.btn--primary {
+	background-color: #f05123;
+	font-size: 1.6rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.submit-btn {
+	display: inline-block;
+	background-color: #b80257;
+	text-transform: uppercase;
+	min-width: 12rem;
+	padding: 0;
+	font-size: 1.4rem;
+	font-weight: 300;
+	line-height: 4rem;
+}
+@media (min-width: 0) and (max-width: 739px) {
+	.submit-btn {
+		width: 100%;
+	}
+}
+
+.course-section__header {
+	margin: 2rem 0 4.8rem;
+}
+
+.course-section__title {
+	font-size: 3.2rem;
+	font-weight: 700;
+}
+
+.course-section__desc {
+	font-size: 1.6rem;
+	line-height: 1.6;
+	margin-top: 2.4rem;
+	font-weight: 400;
+	padding: 0 1.6rem;
+}
+
+.course-section__btn {
+	text-align: center;
+	margin-top: 3.2rem;
+}
+
+.course-section--btn {
+	display: inline-block;
+	font-size: 1.6rem;
+	font-weight: 500;
+	line-height: 2.4rem;
+	min-width: 18rem;
+}
+@media (min-width: 0) and (max-width: 739px) {
+	.course-section--btn {
+		width: calc(100% - 5.6rem);
+	}
+}
+
+/*Courses list*/
+.course {
+	background-color: white;
+}
+@media (min-width: 0) and (max-width: 739px) {
+	.course {
+		margin: 0 1.6rem;
+	}
+}
+.course + .course {
+	margin-top: 3.2rem;
+}
+.course__img {
+	overflow: hidden;
+	width: 100%;
+	cursor: pointer;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.course__img-url {
+	background-image: url('https://img.youtube.com/vi/R6plN3FvzFY/sddefault.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding-top: 56%;
+	width: 100%;
+	transition: all 0.3s;
+}
+.course:hover .course__img-url {
+	transform: scale(1.1);
+	background-color: black;
+	opacity: 0.8;
+}
+.course:hover .course__title {
+	opacity: 1;
+}
+.course__body {
+	padding: 1.2rem 1.6rem 0;
+	margin-bottom: 3rem;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	border-top: none;
+}
+.course__title {
+	font-size: 1.9rem;
+	font-weight: 600;
+	cursor: pointer;
+	opacity: 0.9;
+}
+.course__desc {
+	margin: 1.2rem 0 0.8rem;
+	font-weight: 400;
+	line-height: 1.6;
+}
+.course__desc,
+.course__author-name,
+.course__member-number,
+.course__btn {
+	font-size: 1.4rem;
+}
+.course__detail {
+	display: flex;
+	height: 4rem;
+	justify-content: space-between;
+	align-items: center;
+	color: rgba(0, 0, 0, 0.6);
+	margin: 1rem 0 1rem;
+}
+.course__author {
+	display: flex;
+	align-items: center;
+}
+.course__author-img {
+	width: 3.2rem;
+	border-radius: 100px;
+}
+.course__author-name {
+	display: inline-block;
+	margin-left: 0.8rem;
+	font-weight: 500;
+}
+.course__member-number {
+	color: rgba(0, 0, 0, 0.6);
+}
+.course__member-number > p {
+	display: inline-block;
+	font-weight: 500;
+	margin-left: 0.6rem;
+}
+.course__btn {
+	font-size: 1.4rem;
+	padding: 1rem 1.6rem;
+	font-weight: 500;
+	text-transform: none;
+}
+
+#app {
+	overflow: hidden;
+}
+
+.course-container {
+	margin-top: 5.4rem;
+}
+
+.header {
+	position: relative;
+	background-image: url('/assets/img/header-background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-top: 100vh;
+}
+.header__content-wrapper {
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.header__content {
+	flex: 1 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+@media (min-width: 0) and (max-width: 739px) {
+	.header__content {
+		margin: 2.4rem 1.6rem 0;
+		text-align: center;
+	}
+}
+.header__body {
+	flex: 1;
+	color: white;
+}
+.header__slogan {
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+.header__title {
+	font-size: 5rem;
+	line-height: 1.8;
+	margin: 1.6rem 0 2.4rem;
+	text-transform: uppercase;
+}
+@media (min-width: 0) and (max-width: 739px) {
+	.header__title {
+		font-size: 3.8rem;
+	}
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+	.header {
+		padding-top: 60%;
+		background-size: 128% auto;
+	}
+}
+
+.intro-section {
+	padding-top: 0.6rem;
+}
+.intro-section__item {
+	padding-top: 4.4rem;
+	padding-bottom: 4.4rem;
+	text-align: center;
+}
+@media (min-width: 0) and (max-width: 739px) {
+	.intro-section__item {
+		padding-top: 2.2rem;
+	}
+}
+.intro-section__item:first-child {
+	padding-top: 4.4rem;
+}
+.intro-section__img {
+	width: 7.6rem;
+}
+.intro-section__msg {
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-top: 1.6rem;
+	margin-bottom: 1.2rem;
+}
+
+.inspired-section {
+	height: 34rem;
+	background-color: #f05123;
+	margin-top: 13.6rem;
+}
+.inspired-section__body {
+	text-align: center;
+	color: white;
+	padding: 8.2rem 0 4rem;
+}
+.inspired-section__title {
+	font-size: 3.2rem;
+}
+.inspired-section__slogan {
+	font-size: 1.6rem;
+	margin: 2.2rem 0 5.2rem;
+}
+.inspired-section__btn {
+	font-size: 1.6rem;
+	background-color: #9c7ae0;
+	display: inline-block;
+	min-width: 16rem;
+	margin: 0 auto;
+}
+@media (min-width: 0) and (max-width: 739px) {
+	.inspired-section__btn {
+		width: calc(100% - 5.6rem);
+	}
+}
+.inspired-section__btn:hover {
+	filter: brightness(1);
+}
+
+.founder-section {
+	margin: 2rem 0;
+}
+.founder-section__img {
+	max-width: 100%;
+}
+.founder-section__msg {
+	font-weight: 400;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+}
+@media (min-width: 0) and (max-width: 739px) {
+	.founder-section__msg {
+		margin-top: 2rem;
+		padding: 0 2rem;
+		text-align: center;
+	}
+}
+.founder-section__msg > blockquote {
+	font-size: 2rem;
+	line-height: 1.6;
+	font-style: italic;
+}
+.founder-section__msg > p {
+	font-size: 1.4rem;
+	margin-top: 1.6rem;
+	margin-bottom: 1.2rem;
+}

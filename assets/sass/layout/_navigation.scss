@@ -1,0 +1,114 @@
+// navbar
+.navBar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: black;
+	transition: all 0.3s ease-in-out;
+	z-index: 3000;
+
+	&--transparent {
+		margin-top: 1.4rem;
+		background-color: transparent;
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		height: $navBar-height;
+	}
+
+	&__link {
+		display: inline-block;
+		text-decoration: none;
+		color: white;
+	}
+
+	&__logo {
+		padding-bottom: 0.8rem;
+
+		@include responsive(mobile) {
+			margin-left: 1.6rem;
+		}
+	}
+
+	&__logo img {
+		height: 3.2rem;
+	}
+
+	&__mainMenu {
+		list-style: none;
+		padding: 0 1.5rem;
+		display: none;
+		margin-left: 4rem;
+
+		@include responsive(pc) {
+			display: inline-block;
+		}
+	}
+
+	&__subMenu {
+		display: none;
+		position: absolute;
+		background-color: white;
+
+		&::before {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 40px;
+			top: -20px;
+		}
+
+		.navBar__link {
+			display: block;
+			font-size: 1.6rem;
+			color: $text-color;
+			line-height: 4.6rem;
+			padding-left: 2.4rem;
+			min-width: 23.2rem;
+			text-transform: capitalize;
+			font-weight: 300;
+		}
+
+		.navBar__link:hover {
+			background-color: $primary-color;
+			color: white;
+		}
+	}
+
+	&__item {
+		line-height: $navBar-height;
+		display: inline-block;
+		font-size: 1.6rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		padding: 0 1.6rem;
+		position: relative;
+		cursor: pointer;
+	}
+
+	&__item:hover &__subMenu {
+		display: block;
+	}
+
+	&__rightBox {
+		margin-left: auto;
+
+		@include responsive(mobile) {
+			margin-right: 0.8rem;
+		}
+	}
+
+	&__icon {
+		color: white;
+		font-size: 2rem;
+		padding: 0 0.8rem;
+	}
+
+	&__icon + &__icon {
+		margin-left: 1.6rem;
+	}
+}
+

@@ -1,0 +1,27 @@
+{
+  "name": "fake-web-f8",
+  "version": "1.0.0",
+  "description": "my-project f8",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cat": "node-sass -w ./assets/sass/ -o ./assets/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DuyetVu2001/fake-web-f8.git"
+  },
+  "keywords": [
+    "my-project",
+    "f8"
+  ],
+  "author": "DuyetVu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DuyetVu2001/fake-web-f8/issues"
+  },
+  "homepage": "https://github.com/DuyetVu2001/fake-web-f8#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.0"
+  }
+}

@@ -1,0 +1,25 @@
+/*
+	------------------4. font-size chung cho text 1.4rem --> Xong
+	6. color btn !important  -- tạo btn dùng lại 
+	7. font-weight cho chữ thường 500
+	8. thống nhất đặt btn (div hay a hay button) - học bem btn
+	----------------9. line-height: 1.6
+	10. hover btn, hover footer,
+	----------------13. chú ý component dùng lại -- ko có margin
+	14. padding-top: 50%;
+	16. thanh tiến độ học (courses-item)
+*/
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'layout/navigation';
+@import 'layout/footer';
+
+@import 'components/buttons';
+@import 'components/courses';
+
+@import 'pages/home';
