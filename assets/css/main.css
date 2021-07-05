@@ -254,7 +254,10 @@ html {
 	}
 }
 
-/*Courses list*/
+
+
+
+*Courses list*/
 .course {
 	background-color: white;
 }
@@ -358,7 +361,7 @@ html {
 
 .header {
 	position: relative;
-	background-image: url('./assets/img/header-background.jpg');
+	background-image: url('/assets/img/header-background.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
